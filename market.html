@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indonesia Bimbel Market Map</title>
+<style>
+  :root{color-scheme:light;--page:#f9f9f7;--surface-1:#fcfcfb;--text-primary:#0b0b0b;
+    --text-secondary:#52514e;--text-muted:#898781;--border:rgba(11,11,11,0.10);
+    --series-1:#2a78d6;--series-1-bg:#cde2fb;--crit:#d03b3b;--crit-bg:#fbe4e4;
+    --warn:#8a5a00;--warn-bg:#fdf0d2;--neutral-bg:#f0efec;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text-primary);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 20px 64px}
+  .eyebrow{font-size:13px;font-weight:600;color:var(--series-1);text-transform:uppercase;
+    letter-spacing:.04em;margin-bottom:8px}
+  h1{font-size:clamp(24px,4vw,32px);margin:0 0 8px}
+  .lede{color:var(--text-secondary);margin:0;max-width:720px;font-size:15px}
+  .nav{margin:14px 0 0;font-size:13.5px}
+  .nav a{color:var(--series-1)}
+  .notice{margin:20px 0 8px;padding:14px 16px;background:var(--warn-bg);
+    border:1px solid var(--border);border-radius:10px;font-size:13.5px}
+  .notice strong{color:var(--warn)}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 24px}
+  @media(max-width:760px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+  .kpi{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;
+    padding:16px 18px}
+  .kpi .value{font-size:24px;font-weight:700}
+  .kpi .label{font-size:12.5px;color:var(--text-secondary);margin-top:4px}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 16px}
+  .toolbar select{padding:9px 12px;border-radius:8px;border:1px solid var(--border);
+    background:var(--surface-1);color:var(--text-primary);font-size:13.5px}
+  .toolbar .count{font-size:12.5px;color:var(--text-muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
+  .card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;
+    padding:16px 18px}
+  .card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
+    margin-bottom:10px}
+  .card h3{margin:0;font-size:16px}
+  .cat{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;
+    background:var(--neutral-bg);color:var(--text-secondary)}
+  .c1{background:var(--crit-bg);color:var(--crit)}
+  .c3{background:var(--series-1-bg);color:var(--series-1)}
+  dl{margin:0;display:grid;grid-template-columns:104px 1fr;gap:5px 12px;font-size:13px}
+  dt{color:var(--text-muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;
+    font-weight:600;padding-top:2px}
+  dd{margin:0;color:var(--text-secondary)}
+  dd a{color:var(--series-1);text-decoration:none}
+  dd a:hover{text-decoration:underline}
+  .chan-yes{color:var(--crit);font-weight:600}
+  .chan-no{color:var(--text-muted)}
+  .threat{color:var(--text-primary);font-weight:600}
+  footer{margin-top:28px;font-size:12.5px;color:var(--text-muted)}
+  @media(prefers-color-scheme:dark){:root{--page:#0d0d0d;--surface-1:#1a1a19;
+    --text-primary:#fff;--text-secondary:#c3c2b7;--text-muted:#898781;
+    --border:rgba(255,255,255,.10);--series-1:#3987e5;--series-1-bg:#16233a;
+    --crit:#e66767;--crit-bg:#3a1d1d;--warn:#fab219;--warn-bg:#33280d;--neutral-bg:#26261f}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Market Map</div>
+  <h1>Indonesia Bimbel &amp; Test-Prep Market</h1>
+  <p class="lede">The operators that matter commercially in Indonesian exam coaching &mdash; CPNS/kedinasan specialists, national chains and online platforms. Compiled from each operator&rsquo;s own website.</p>
+  <p class="nav">&larr; <a href="index.html">Back to the LKP channel map (2,594 institutions)</a></p>
+  <div class="notice"><strong>Why this map is separate from the registry.</strong> Only 152 of the 2,594 registry LKPs are bimbel, and the biggest players are largely absent &mdash; Ruangguru appears twice, Akses Learning and CPNS Academy not at all. Bimbels typically incorporate as PT/CV rather than register as LKP under Kemendikdasmen, so the registry cannot map this sector. A blank field means the operator does not publish that figure, never that it is zero.</div>
+  <div class="kpi-row">
+    <div class="kpi"><div class="value">12</div><div class="label">Operators profiled</div></div>
+    <div class="kpi"><div class="value">4</div><div class="label">CPNS / kedinasan specialists</div></div>
+    <div class="kpi"><div class="value">2</div><div class="label">Already run a partner channel</div></div>
+    <div class="kpi"><div class="value">692</div><div class="label">Ganesha Operation locations</div></div>
+  </div>
+  <div class="toolbar">
+    <select id="catFilter"><option value="all">All categories</option><option value="CPNS / kedinasan specialist">CPNS / kedinasan specialist</option><option value="Certification distributor">Certification distributor</option><option value="Coding bootcamp">Coding bootcamp</option><option value="Language / computer chain">Language / computer chain</option><option value="National offline chain">National offline chain</option><option value="Online platform">Online platform</option><option value="Vocational college network">Vocational college network</option></select>
+    <select id="chanFilter"><option value="all">Any channel status</option><option value="yes">Has a partner / reseller programme</option><option value="no">No channel programme</option></select>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="grid" id="grid"><article class="card" data-cat="CPNS / kedinasan specialist" data-chan="yes"><div class="card-head"><h3>Akses Learning</h3><span class="cat c1">CPNS / kedinasan specialist</span></div><dl><dt>Products</dt><dd>CPNS, PPPK, kedinasan, UTBK/PTN, TNI/POLRI, STAN, BUMN</dd><dt>Delivery</dt><dd>Online live + offline centres + blended &#x27;Eksekutif&#x27; + self-study CAT (tocpns.com)</dd><dt>Pricing</dt><dd>Rp 378,000 – 51,680,000</dd><dt>Scale</dt><dd>15 years; &#x27;dipercaya 20+ kementerian dan lembaga negara&#x27;</dd><dt>Channel</dt><dd class="chan-yes">YES — &#x27;Daftar Mitra&#x27; partner registration; terms not published</dd><dt>Read</dt><dd class="threat">DIRECT — incumbent with a live partner channel</dd><dt>Web</dt><dd><a href="https://akseslearning.com" target="_blank" rel="noopener">akseslearning.com</a></dd></dl></article><article class="card" data-cat="CPNS / kedinasan specialist" data-chan="no"><div class="card-head"><h3>CPNS Academy</h3><span class="cat c1">CPNS / kedinasan specialist</span></div><dl><dt>Products</dt><dd>CPNS/CASN (SKD+SKB), PPPK, kedinasan, MS Office cert, TOEFL</dd><dt>Delivery</dt><dd>Online, live Zoom, recorded, CAT practice tests, 1-year access</dd><dt>Pricing</dt><dd>Rp 69,000 – 189,000</dd><dt>Scale</dt><dd>25,000+ registered members; 26K Instagram</dd><dt>Channel</dt><dd class="chan-no">No reseller/affiliate/B2B programme found</dd><dt>Read</dt><dd class="threat">PRICE FLOOR — sets consumer expectation near Rp 69k</dd><dt>Web</dt><dd><a href="https://cpnsacademy.id" target="_blank" rel="noopener">cpnsacademy.id</a></dd></dl></article><article class="card" data-cat="CPNS / kedinasan specialist" data-chan="no"><div class="card-head"><h3>Gama College</h3><span class="cat c1">CPNS / kedinasan specialist</span></div><dl><dt>Products</dt><dd>Kedinasan, AKPOL/AKMIL/AAU/AAL, TNI-Polri, IPDN, POLTEKIM/IP, PKN STAN</dd><dt>Delivery</dt><dd>Intensive bimbel</dd><dt>Pricing</dt><dd>Rp 799,000 (from Rp 1,500,000)</dd><dt>Scale</dt><dd>30+ years (since 1996); &#x27;ribuan siswa lolos&#x27;</dd><dt>Channel</dt><dd class="chan-no">None found</dd><dt>Read</dt><dd class="threat">Competitor, no channel</dd><dt>Web</dt><dd><a href="https://gama-college.com" target="_blank" rel="noopener">gama-college.com</a></dd></dl></article><article class="card" data-cat="CPNS / kedinasan specialist" data-chan="yes"><div class="card-head"><h3>Masterprima</h3><span class="cat c1">CPNS / kedinasan specialist</span></div><dl><dt>Products</dt><dd>PKN STAN, CPNS, PPPK, UTBK, TNI/POLRI, kedinasan</dd><dt>Delivery</dt><dd>Offline branches + own CBT platform (cbt.masterprima.com)</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>Multi-city (Surabaya, Sidoarjo, Balikpapan +)</dd><dt>Channel</dt><dd class="chan-yes">YES — Kemitraan franchise. Exclusive 1 city / 1 branch (max 2 in provincial capitals). Partner receives SIM management system, CBT platform, digital marketing, instructor training, branding events, alumni network, materials. Requires an existing tutoring business. Claims payback in 1 year; no fee or revenue split published.</dd><dt>Read</dt><dd class="threat">DIRECT — same model you are proposing, already running</dd><dt>Web</dt><dd><a href="https://masterprima.com" target="_blank" rel="noopener">masterprima.com</a></dd></dl></article><article class="card" data-cat="Certification distributor" data-chan="no"><div class="card-head"><h3>MyEduSolve</h3><span class="cat c6">Certification distributor</span></div><dl><dt>Products</dt><dd>Microsoft / Certiport international digital-literacy certifications</dd><dt>Delivery</dt><dd>Distributes certification + testing to Indonesian institutions</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>Certiport network spans 14,000+ authorised testing centres globally</dd><dt>Channel</dt><dd class="chan-mid">Operates AS a distribution channel for international certification</dd><dt>Read</dt><dd class="threat">STRUCTURAL TWIN — your business model, adjacent category. Partner or incumbent.</dd><dt>Web</dt><dd><a href="https://myedusolve.com" target="_blank" rel="noopener">myedusolve.com</a></dd></dl></article><article class="card" data-cat="Coding bootcamp" data-chan="no"><div class="card-head"><h3>Hacktiv8</h3><span class="cat c7">Coding bootcamp</span></div><dl><dt>Products</dt><dd>Coding bootcamp, digital talent, corporate training</dd><dt>Delivery</dt><dd>Bootcamp + corporate</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>131K Instagram followers; first coding bootcamp in Indonesia</dd><dt>Channel</dt><dd class="chan-mid">Corporate/B2B arm</dd><dt>Read</dt><dd class="threat">Adjacent, not competing on CPNS</dd><dt>Web</dt><dd><a href="https://hacktiv8.com" target="_blank" rel="noopener">hacktiv8.com</a> &middot; <a href="https://instagram.com/hacktiv8id" target="_blank" rel="noopener">@hacktiv8id</a></dd></dl></article><article class="card" data-cat="Language / computer chain" data-chan="no"><div class="card-head"><h3>LPIA</h3><span class="cat c4">Language / computer chain</span></div><dl><dt>Products</dt><dd>English (FAIES method), computer (FAICL), plus own tests: LPIA-EPT (TOEFL), CPT (TOEIC), IPT (IELTS)</dd><dt>Delivery</dt><dd>Offline branches</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>45 branches nationwide; founded 1990; 11 branches in our registry data</dd><dt>Channel</dt><dd class="chan-mid">Chain; branch model not published</dd><dt>Read</dt><dd class="threat">Sells its own IELTS-equivalent test — competitor on language</dd><dt>Web</dt><dd><a href="https://lpiagroup.com" target="_blank" rel="noopener">lpiagroup.com</a></dd></dl></article><article class="card" data-cat="National offline chain" data-chan="no"><div class="card-head"><h3>Ganesha Operation</h3><span class="cat c2">National offline chain</span></div><dl><dt>Products</dt><dd>SD–SMA, UTBK, PTN and PT Kedinasan entrance</dd><dt>Delivery</dt><dd>Offline, technology-supported</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>692 locations nationwide; 55,000+ placed into PTN/kedinasan; 2 MURI records (2022); 61 branches in DKI+Jabar registry</dd><dt>Channel</dt><dd class="chan-no">NO — explicitly &#x27;dikelola secara terpusat (no franchise)&#x27;</dd><dt>Read</dt><dd class="threat">Largest offline footprint; closed to partners</dd><dt>Web</dt><dd><a href="https://ganeshaoperation.com" target="_blank" rel="noopener">ganeshaoperation.com</a></dd></dl></article><article class="card" data-cat="Online platform" data-chan="no"><div class="card-head"><h3>Cakap</h3><span class="cat c3">Online platform</span></div><dl><dt>Products</dt><dd>Language learning (English, Mandarin, others), upskilling</dd><dt>Delivery</dt><dd>App, live tutoring</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>Major Indonesian edtech; registered as LKP (PT Cerdas Digital Nusantara)</dd><dt>Channel</dt><dd class="chan-no">Not researched</dd><dt>Read</dt><dd class="threat">Language-side competitor</dd><dt>Web</dt><dd><a href="https://cakap.com" target="_blank" rel="noopener">cakap.com</a></dd></dl></article><article class="card" data-cat="Online platform" data-chan="no"><div class="card-head"><h3>MySkill</h3><span class="cat c3">Online platform</span></div><dl><dt>Products</dt><dd>1,400+ certified e-learning materials, 12 intensive bootcamps, CV review, interview training</dd><dt>Delivery</dt><dd>Online e-learning + bootcamps</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>1M Instagram followers</dd><dt>Channel</dt><dd class="chan-no">Not published</dd><dt>Read</dt><dd class="threat">Adjacent skills platform</dd><dt>Web</dt><dd><a href="https://myskill.id" target="_blank" rel="noopener">myskill.id</a> &middot; <a href="https://instagram.com/myskill.id" target="_blank" rel="noopener">@myskill.id</a></dd></dl></article><article class="card" data-cat="Online platform" data-chan="no"><div class="card-head"><h3>Ruangguru</h3><span class="cat c3">Online platform</span></div><dl><dt>Products</dt><dd>PAUD–SMA subjects, UTBK/SNBT, KEDINASAN SKD, English Academy, Skill Academy, coding (Kalananti)</dd><dt>Delivery</dt><dd>App (ruangbelajar, Roboguru) + Brain Academy Online live + 270+ offline Brain Academy centres</dd><dt>Pricing</dt><dd>Free – from Rp 20,000 to hundreds of thousands; instalments</dd><dt>Scale</dt><dd>270+ offline branches; markets itself as #1 in Indonesia</dd><dt>Channel</dt><dd class="chan-mid">B2B via Ruangkerja (corporate training) and Ruangkelas (free LMS). No franchise/reseller found.</dd><dt>Read</dt><dd class="threat">COMPETES ON BOTH LINES — sells kedinasan SKD and English</dd><dt>Web</dt><dd><a href="https://ruangguru.com" target="_blank" rel="noopener">ruangguru.com</a></dd></dl></article><article class="card" data-cat="Vocational college network" data-chan="no"><div class="card-head"><h3>LP3I</h3><span class="cat c5">Vocational college network</span></div><dl><dt>Products</dt><dd>Digital Business, Business Admin, Computer Mgmt, Accounting, PR; D3 + Applied Bachelor</dd><dt>Delivery</dt><dd>Campus-based, 70% practice / 30% theory, internship + job placement</dd><dt>Pricing</dt><dd>Not disclosed</dd><dt>Scale</dt><dd>34 years; 26 locations nationwide; 7 branches in our data</dd><dt>Channel</dt><dd class="chan-mid">Formal education institution — closed curriculum</dd><dt>Read</dt><dd class="threat">Grads already get 3 professional certs + TOEIC</dd><dt>Web</dt><dd><a href="https://lp3i.ac.id" target="_blank" rel="noopener">lp3i.ac.id</a></dd></dl></article></div>
+  <footer>Compiled August 2026 from operator websites and search results. Figures are self-reported by each operator and unverified. Pricing and programme terms change &mdash; re-check before acting.</footer>
+</div>
+<script>
+  const cat=document.getElementById('catFilter'),chan=document.getElementById('chanFilter'),
+        cnt=document.getElementById('count'),cards=[...document.querySelectorAll('.card')];
+  function render(){
+    let n=0;
+    cards.forEach(c=>{
+      const ok=(cat.value==='all'||c.dataset.cat===cat.value)&&
+               (chan.value==='all'||c.dataset.chan===chan.value);
+      c.style.display=ok?'':'none'; if(ok)n++;
+    });
+    cnt.textContent=n+' of '+cards.length+' shown';
+  }
+  cat.addEventListener('change',render); chan.addEventListener('change',render); render();
+</script>
+</body>
+</html>
