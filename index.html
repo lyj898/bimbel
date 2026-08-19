@@ -131,6 +131,18 @@
     color: var(--text-muted);
     white-space: nowrap;
   }
+  .btn-download {
+    padding: 9px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--series-1);
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-download:hover { opacity: 0.9; }
 
   .table-scroll {
     overflow-x: auto;
@@ -256,6 +268,7 @@
         <option value="has-email">Hanya yang punya email</option>
       </select>
       <span class="count" id="rowCount"></span>
+      <button type="button" id="downloadBtn" class="btn-download">Unduh CSV</button>
     </div>
     <div class="table-scroll">
       <table>
@@ -292,6 +305,31 @@
   const searchInput = document.getElementById("search");
   const contactFilter = document.getElementById("contactFilter");
   const rowCount = document.getElementById("rowCount");
+  const downloadBtn = document.getElementById("downloadBtn");
+  let currentFiltered = rows;
+
+  function csvEscape(v) {
+    const s = String(v == null ? "" : v);
+    return '"' + s.replace(/"/g, '""') + '"';
+  }
+
+  function downloadCsv() {
+    const header = ["NPSN", "Nama LKP", "Kota/Kabupaten", "Kecamatan", "Telepon", "Email"];
+    const lines = [header.map(csvEscape).join(",")];
+    currentFiltered.forEach(r => {
+      lines.push([r.npsn, r.nama, r.kotaAdm, r.kecamatan, r.telp, r.email].map(csvEscape).join(","));
+    });
+    const csv = "﻿" + lines.join("\r\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "lkp-swasta-dki-jakarta.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
 
   function render() {
     const q = searchInput.value.trim().toLowerCase();
@@ -303,6 +341,7 @@
       if (filterMode === "has-email" && !r.email) return false;
       return true;
     });
+    currentFiltered = filtered;
 
     tbody.innerHTML = "";
     if (filtered.length === 0) {
@@ -325,6 +364,7 @@
 
   searchInput.addEventListener("input", render);
   contactFilter.addEventListener("change", render);
+  downloadBtn.addEventListener("click", downloadCsv);
   render();
 </script>
 
